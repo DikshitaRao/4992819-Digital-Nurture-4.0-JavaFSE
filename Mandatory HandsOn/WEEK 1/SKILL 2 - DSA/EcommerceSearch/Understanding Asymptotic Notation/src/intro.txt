@@ -1,0 +1,46 @@
+E-commerce Search Function - Project Overview
+
+This project is developed to demonstrate efficient search techniques within an e-commerce platform. In a real-world e-commerce environment, fast and accurate search capabilities are crucial for helping users find products quickly and improving overall user experience. This implementation focuses on two fundamental search algorithms: Linear Search and Binary Search.
+
+1. Asymptotic Notation & Time Complexity
+
+To understand the performance of these algorithms, we use Big O notation. It describes the growth rate of an algorithm in relation to the input size and helps in comparing algorithm efficiency:
+
+- O(1): Constant time – the operation does not depend on input size.
+- O(n): Linear time – the operation scales directly with input size.
+- O(log n): Logarithmic time – the operation scales efficiently even with large input sizes.
+
+For search operations:
+- Linear Search:
+  - Best Case: O(1) – match found at the beginning
+  - Average Case: O(n/2) ≈ O(n)
+  - Worst Case: O(n) – match at the end or not present
+- Binary Search:
+  - Best Case: O(1) – match is at the middle
+  - Average/Worst Case: O(log n) – data is halved with each step
+
+2. Setup
+
+A `Product` class was created to represent items in the e-commerce system. Each product has:
+- A unique product ID (integer)
+- A product name (string)
+- A category (string)
+
+These attributes support searching based on product name.
+
+3. Implementation
+
+Two search approaches were implemented:
+- **Linear Search**: Scans each product sequentially in an unsorted array to find a match.
+- **Binary Search**: Requires a sorted array and repeatedly divides the search range in half to find the target efficiently.
+
+To perform binary search, the products are sorted by product name using a comparator before applying the algorithm.
+
+4. Analysis and Comparison
+
+- Linear Search is simple and does not require sorting, but becomes inefficient as the dataset grows.
+- Binary Search is significantly faster on large datasets, with logarithmic time complexity, but it requires the data to be sorted first.
+
+Conclusion:
+
+For small or unsorted datasets, linear search may be acceptable. However, for performance-critical systems like e-commerce platforms where speed and scale are essential, binary search or more advanced search engines (like Elasticsearch) are preferred. This project lays the groundwork by implementing both strategies and comparing their performance using realistic product data.
