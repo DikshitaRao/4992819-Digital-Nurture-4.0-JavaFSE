@@ -1,0 +1,58 @@
+Financial Forecasting Tool (Java - Recursive Approach)
+Overview:
+This project is a simple Java-based financial forecasting tool that calculates
+the future value of an investment using recursive and iterative approaches.
+It simulates compound annual growth using basic programming concepts.
+
+Key Features:
+- Uses recursion to calculate future investment value over a number of years.
+- Provides an iterative alternative for comparison.
+- Clean and beginner-friendly Java code.
+- Easy to run in IntelliJ IDEA or any Java IDE.
+
+Project Structure:
+FinancialForecasting/
+└── src/
+    └── Forecast.java
+
+Concepts Used:
+- Recursion: A function calling itself to solve a smaller part of the same problem.
+- Compound Growth: The formula used is
+  Future Value = Initial Value * (1 + Growth Rate) ^ Years
+
+How to Run:
+1. Open IntelliJ IDEA or another Java IDE.
+2. Create a project named "FinancialForecasting".
+3. Inside the 'src' folder, create a file named Forecast.java.
+4. Paste the program code into Forecast.java.
+5. Run the file to see the result.
+Output:
+Future value after 5 years: 14693.28
+
+Methods:
+1. Recursive Method:
+   public static double calculateFutureValue(double initialValue, double growthRate, int years) {
+       if (years == 0) return initialValue;
+       return calculateFutureValue(initialValue * (1 + growthRate), growthRate, years - 1);
+   }
+
+2. Iterative Method:
+   public static double calculateFutureValueIterative(double initialValue, double growthRate, int years) {
+       for (int i = 0; i < years; i++) {
+           initialValue *= (1 + growthRate);
+       }
+       return initialValue;
+   }
+
+Time Complexity:
+- Recursive: O(n) – One recursive call per year.
+- Iterative: O(n) – Loop runs for the number of years, generally more efficient.
+
+Possible Enhancements:
+- Accept user input from console
+- Add file output or logging
+- Implement GUI using JavaFX or Swing
+- Handle invalid inputs gracefully
+
+Conclusion:
+This project was created as an educational example to demonstrate recursion and basic forecasting logic in Java.
