@@ -1,0 +1,2 @@
+This is a feature file added in GitWorkFolder.
+Used for Git branching and merging demonstration.

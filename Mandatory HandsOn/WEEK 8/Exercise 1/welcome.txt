@@ -1,0 +1,10 @@
+Welcome to the GitDemo Project!
+
+This file is created as part of the Git Hands-on Lab.
+We are learning how to:
+- Initialize a Git repository
+- Add and commit files
+- Push changes to a remote repository
+- Pull updates from the remote repository
+
+

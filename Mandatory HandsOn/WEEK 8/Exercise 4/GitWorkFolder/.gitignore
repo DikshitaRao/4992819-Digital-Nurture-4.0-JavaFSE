@@ -1,0 +1,7 @@
+# Ignore all merge backup files
+*.orig
+*.rej
+
+# Ignore system files
+.DS_Store
+Thumbs.db
